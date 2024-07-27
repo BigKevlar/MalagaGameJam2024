@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgm5o38jw58uc"
-path="res://.godot/imported/ouija.png-ad4f983f7627c2451b3fb1ec284c371f.ctex"
+uid="uid://coqu6o80ox6md"
+path="res://.godot/imported/delimitadores de zona de juego.png-75be02225d4a768e770a5bad41270c0e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Imágenes Polo Digital/ouija.png"
-dest_files=["res://.godot/imported/ouija.png-ad4f983f7627c2451b3fb1ec284c371f.ctex"]
+source_file="res://Textures/delimitadores de zona de juego.png"
+dest_files=["res://.godot/imported/delimitadores de zona de juego.png-75be02225d4a768e770a5bad41270c0e.ctex"]
 
 [params]
 

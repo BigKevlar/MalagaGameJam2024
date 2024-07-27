@@ -124,9 +124,8 @@ animation = &"move_down"
 frame = 2
 frame_progress = 0.811924
 
-[node name="Area2D" type="Area2D" parent="."]
-collision_mask = 0
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_tskku")

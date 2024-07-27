@@ -1,4 +1,14 @@
-[gd_scene format=3 uid="uid://cjyfpgyt402pb"]
+[gd_scene load_steps=5 format=3 uid="uid://cjyfpgyt402pb"]
+
+[ext_resource type="Script" path="res://Scripts/menu_principal.gd" id="1_de1jv"]
+
+[sub_resource type="Theme" id="Theme_1ltwa"]
+default_font_size = 175
+
+[sub_resource type="Theme" id="Theme_lnv3o"]
+default_font_size = 35
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ljeqr"]
 
 [node name="MenuPrincipal" type="Control"]
 layout_mode = 3
@@ -7,10 +17,37 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_de1jv")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_right = 101.0
-offset_bottom = 40.0
+[node name="título_principal" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -594.0
+offset_top = 96.0
+offset_right = 594.0
+offset_bottom = 374.0
+grow_horizontal = 2
+theme = SubResource("Theme_1ltwa")
 bbcode_enabled = true
-text = "[shake rate=20.0 level=5 connected=1]titulo"
+text = "[shake rate=20.0 level=2 connected=1][center]Placeholder"
+
+[node name="boton_empezar" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.0
+offset_top = 61.0
+offset_right = 73.0
+offset_bottom = 118.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_lnv3o")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ljeqr")
+text = "¿Entrar?"
+
+[connection signal="pressed" from="boton_empezar" to="." method="_on_boton_empezar_pressed"]

@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://dv4b1b5nnjdle"]
+
+[ext_resource type="Script" path="res://Scripts/GameManager.gd" id="1_84tb0"]
+[ext_resource type="Texture2D" uid="uid://btxbo6h0yccpa" path="res://Textures/Dunkelrot_3081_Dark-Red_3081_02.11.31.000013---116700_OS.jpg" id="2_jd4kx"]
+[ext_resource type="Texture2D" uid="uid://bbyo2xw7svqwv" path="res://Textures/Solid_blue.svg.png" id="3_27h0b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_svtft"]
+size = Vector2(569.092, 569.092)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gi1lc"]
+size = Vector2(1016.53, 1016.53)
+
+[node name="EventManager" type="Node2D"]
+script = ExtResource("1_84tb0")
+
+[node name="ouija_red" type="Sprite2D" parent="."]
+position = Vector2(564.562, 312.562)
+scale = Vector2(0.0791448, 0.0791448)
+texture = ExtResource("2_jd4kx")
+
+[node name="Area2DRed" type="Area2D" parent="ouija_red"]
+
+[node name="CollisionShape2DRed" type="CollisionShape2D" parent="ouija_red/Area2DRed"]
+position = Vector2(0.000488281, 0)
+shape = SubResource("RectangleShape2D_svtft")
+
+[node name="ouija_blue" type="Sprite2D" parent="."]
+position = Vector2(564.375, 312.375)
+scale = Vector2(0.0441895, 0.0441895)
+texture = ExtResource("3_27h0b")
+
+[node name="Area2DBlue" type="Area2D" parent="ouija_blue"]
+
+[node name="CollisionShape2DBlue" type="CollisionShape2D" parent="ouija_blue/Area2DBlue"]
+position = Vector2(-0.000976563, 0)
+shape = SubResource("RectangleShape2D_gi1lc")
+
+[connection signal="area_entered" from="ouija_red/Area2DRed" to="." method="_on_area_2d_red_area_entered"]
+[connection signal="area_entered" from="ouija_blue/Area2DBlue" to="." method="_on_area_2d_blue_area_entered"]

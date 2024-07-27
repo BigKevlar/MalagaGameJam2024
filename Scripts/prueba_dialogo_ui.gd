@@ -5,13 +5,15 @@ var texto : Array = []
 @onready var mi_archivo : String = "res://Scripts/texto_juego.txt"
 var linea_archivo = -1
 var terminado = true
+var texto_finalizado = false
 
 func _ready():
-	var file = FileAccess.open(mi_archivo, FileAccess.READ)
-	while not file.eof_reached():
-		texto.append(file.get_line())
-	texto.remove_at(texto.size()-1)
-	file.close()
+	#var file = FileAccess.open(mi_archivo, FileAccess.READ)
+	#while not file.eof_reached():
+		#texto.append(file.get_line())
+	#texto.remove_at(texto.size()-1)
+	#file.close()
+	pass
 
 func _input(event):
 	if event.is_action_pressed("LMB") and terminado:
@@ -25,12 +27,15 @@ func _input(event):
 		terminar_texto()
 
 func escribir_texto():
-	linea_archivo += 1
-	var i = 0
-	while i < texto[linea_archivo].length() and not terminado:
-		rich_text_label.text += texto[linea_archivo][i]
-		await get_tree().create_timer(0.1).timeout
-		i += 1
+	if linea_archivo + 1 == texto.size():
+		cerrar_dialogo()
+	else:
+		linea_archivo += 1
+		var i = 0
+		while i < texto[linea_archivo].length() and not terminado:
+			rich_text_label.text += texto[linea_archivo][i]
+			await get_tree().create_timer(0.1).timeout
+			i += 1
 
 func limpiar_texto():
 	rich_text_label.text = ""
@@ -38,3 +43,16 @@ func limpiar_texto():
 
 func terminar_texto():
 	rich_text_label.text += texto[linea_archivo]
+
+func abrir_dialogo():
+	get_tree().paused = true
+	texto_finalizado = false
+	show()
+	terminado = false
+	await escribir_texto()
+	terminado = true
+
+func cerrar_dialogo():
+	get_tree().paused = false
+	texto_finalizado = true
+	hide()

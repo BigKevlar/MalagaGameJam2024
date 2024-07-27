@@ -1,6 +1,7 @@
 extends Node2D
 
-@onready var animated_sprite_2d = $protagonista/AnimatedSprite2D
+@onready var animated_sprite_2d = $AnimatedSprite2D
+@onready var area_2d = $Area2D
 
 func _physics_process(delta):
 	if Input.is_action_pressed("Left"):

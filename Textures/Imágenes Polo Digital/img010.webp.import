@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqaipuv5k4me"
-path="res://.godot/imported/ouija.webp-3e97381253f754f2f66bd4b9c8eeefe4.ctex"
+uid="uid://b5efwmgonuulb"
+path="res://.godot/imported/img010.webp-905ab63c13f5d473e8cb146d56ff0d83.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Imágenes Polo Digital/ouija.webp"
-dest_files=["res://.godot/imported/ouija.webp-3e97381253f754f2f66bd4b9c8eeefe4.ctex"]
+source_file="res://Textures/Imágenes Polo Digital/img010.webp"
+dest_files=["res://.godot/imported/img010.webp-905ab63c13f5d473e8cb146d56ff0d83.ctex"]
 
 [params]
 

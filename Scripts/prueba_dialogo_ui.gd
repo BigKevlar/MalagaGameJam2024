@@ -28,6 +28,7 @@ func _input(event):
 
 func escribir_texto():
 	if linea_archivo + 1 == texto.size():
+		print("he cerrado el dialogo")
 		cerrar_dialogo()
 	else:
 		linea_archivo += 1
@@ -53,6 +54,7 @@ func abrir_dialogo():
 	terminado = true
 
 func cerrar_dialogo():
+	linea_archivo = -1
 	get_tree().paused = false
 	texto_finalizado = true
 	hide()

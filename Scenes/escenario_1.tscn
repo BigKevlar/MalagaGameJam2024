@@ -1,24 +1,24 @@
-[gd_scene load_steps=36 format=3 uid="uid://tbg6x4aw31i4"]
+[gd_scene load_steps=36 format=3 uid="uid://cnmw37wamlb2s"]
 
-[ext_resource type="PackedScene" uid="uid://b28p1wvjm8dp7" path="res://Scenes/protagonista.tscn" id="1_1sspg"]
-[ext_resource type="Texture2D" uid="uid://hsrijdb3o01k" path="res://Textures/pared.png" id="2_jrbbp"]
-[ext_resource type="Texture2D" uid="uid://dujw5angrv2d8" path="res://Textures/suelo.png" id="2_tu4vb"]
-[ext_resource type="Texture2D" uid="uid://yyht5sxcddma" path="res://Textures/taquillas entrada.webp" id="3_hvhxc"]
-[ext_resource type="Texture2D" uid="uid://dvsu8gwb1dv2m" path="res://Textures/X.png" id="3_q1oqr"]
-[ext_resource type="Texture2D" uid="uid://cc5m8frolkwut" path="res://Textures/gradas.png" id="4_3b2wp"]
-[ext_resource type="Texture2D" uid="uid://dsdjon7fc4xdi" path="res://Textures/puertas.webp" id="4_si0s0"]
-[ext_resource type="Texture2D" uid="uid://dnq342kl3aju4" path="res://Textures/sillas.png" id="5_pvfbs"]
-[ext_resource type="Texture2D" uid="uid://cjxwa8fqtyvki" path="res://Textures/escalera.PNG" id="5_u3gh2"]
-[ext_resource type="Texture2D" uid="uid://cbwwvrkhf3jno" path="res://Textures/puerta escalera.png" id="6_0453v"]
-[ext_resource type="Texture2D" uid="uid://bygo4mj441pnl" path="res://Textures/mesa.png" id="6_uvvsf"]
-[ext_resource type="Texture2D" uid="uid://dr7jc0e8inkej" path="res://Textures/patio_interior.webp" id="7_iut6r"]
-[ext_resource type="Texture2D" uid="uid://bwasav6cixk4g" path="res://Textures/agujero.png" id="8_35rvv"]
-[ext_resource type="Texture2D" uid="uid://cer1bklsy1h8r" path="res://Textures/cojines.png" id="8_ijngx"]
-[ext_resource type="Texture2D" uid="uid://coqu6o80ox6md" path="res://Textures/delimitadores de zona de juego.png" id="9_p1lqu"]
-[ext_resource type="Texture2D" uid="uid://dwttjqngadynn" path="res://Textures/puertas-ventanas.png" id="9_vtgx2"]
+[ext_resource type="Texture2D" uid="uid://dujw5angrv2d8" path="res://Textures/suelo.png" id="1_mj7vw"]
+[ext_resource type="Texture2D" uid="uid://hsrijdb3o01k" path="res://Textures/pared.png" id="2_n0qr2"]
+[ext_resource type="Texture2D" uid="uid://dvsu8gwb1dv2m" path="res://Textures/X.png" id="3_4ioay"]
+[ext_resource type="Texture2D" uid="uid://dsdjon7fc4xdi" path="res://Textures/puertas.webp" id="4_d4ru0"]
+[ext_resource type="Texture2D" uid="uid://cjxwa8fqtyvki" path="res://Textures/escalera.PNG" id="5_vt2fh"]
+[ext_resource type="Texture2D" uid="uid://cbwwvrkhf3jno" path="res://Textures/puerta escalera.png" id="6_cuqo5"]
+[ext_resource type="Texture2D" uid="uid://dr7jc0e8inkej" path="res://Textures/patio_interior.webp" id="7_5sx7c"]
+[ext_resource type="Texture2D" uid="uid://bwasav6cixk4g" path="res://Textures/agujero.png" id="8_i6qlg"]
+[ext_resource type="Texture2D" uid="uid://coqu6o80ox6md" path="res://Textures/delimitadores de zona de juego.png" id="9_i87eh"]
+[ext_resource type="Texture2D" uid="uid://yyht5sxcddma" path="res://Textures/taquillas entrada.webp" id="10_hcllc"]
+[ext_resource type="Texture2D" uid="uid://cc5m8frolkwut" path="res://Textures/gradas.png" id="11_scpk3"]
+[ext_resource type="Texture2D" uid="uid://dnq342kl3aju4" path="res://Textures/sillas.png" id="12_xi7ej"]
+[ext_resource type="Texture2D" uid="uid://bygo4mj441pnl" path="res://Textures/mesa.png" id="13_oltaa"]
+[ext_resource type="Texture2D" uid="uid://cer1bklsy1h8r" path="res://Textures/cojines.png" id="14_2j0a4"]
+[ext_resource type="Texture2D" uid="uid://dwttjqngadynn" path="res://Textures/puertas-ventanas.png" id="15_6bnkr"]
+[ext_resource type="PackedScene" uid="uid://b28p1wvjm8dp7" path="res://Scenes/protagonista.tscn" id="16_687sj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y2ys0"]
-texture = ExtResource("2_tu4vb")
+texture = ExtResource("1_mj7vw")
 3:0/0 = 0
 4:0/0 = 0
 5:0/0 = 0
@@ -1092,7 +1092,7 @@ texture = ExtResource("2_tu4vb")
 23:44/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bb63a"]
-texture = ExtResource("2_jrbbp")
+texture = ExtResource("2_n0qr2")
 2:0/0 = 0
 3:0/0 = 0
 4:0/0 = 0
@@ -1559,7 +1559,7 @@ texture = ExtResource("2_jrbbp")
 27:31/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u0esw"]
-texture = ExtResource("3_q1oqr")
+texture = ExtResource("3_4ioay")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -2084,7 +2084,7 @@ texture = ExtResource("3_q1oqr")
 1:25/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c3qs3"]
-texture = ExtResource("4_si0s0")
+texture = ExtResource("4_d4ru0")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -2829,7 +2829,7 @@ texture = ExtResource("4_si0s0")
 18:30/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3na3v"]
-texture = ExtResource("5_u3gh2")
+texture = ExtResource("5_vt2fh")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -2940,7 +2940,7 @@ texture = ExtResource("5_u3gh2")
 17:5/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6sgds"]
-texture = ExtResource("6_0453v")
+texture = ExtResource("6_cuqo5")
 2:0/0 = 0
 3:0/0 = 0
 4:0/0 = 0
@@ -3574,7 +3574,7 @@ texture = ExtResource("6_0453v")
 31:21/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nvl5l"]
-texture = ExtResource("7_iut6r")
+texture = ExtResource("7_5sx7c")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -4247,7 +4247,7 @@ texture = ExtResource("7_iut6r")
 25:27/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_413ye"]
-texture = ExtResource("8_35rvv")
+texture = ExtResource("8_i6qlg")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -4953,7 +4953,7 @@ texture = ExtResource("8_35rvv")
 31:21/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kq5mj"]
-texture = ExtResource("9_p1lqu")
+texture = ExtResource("9_i87eh")
 6:0/0 = 0
 7:0/0 = 0
 8:0/0 = 0
@@ -6092,7 +6092,7 @@ texture = ExtResource("9_p1lqu")
 47:47/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4xie2"]
-texture = ExtResource("3_hvhxc")
+texture = ExtResource("10_hcllc")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -6923,7 +6923,7 @@ texture = ExtResource("3_hvhxc")
 16:10/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ilsgu"]
-texture = ExtResource("4_3b2wp")
+texture = ExtResource("11_scpk3")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -7834,7 +7834,7 @@ texture = ExtResource("4_3b2wp")
 22:47/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_crwhi"]
-texture = ExtResource("5_pvfbs")
+texture = ExtResource("12_xi7ej")
 4:0/0 = 0
 5:0/0 = 0
 6:0/0 = 0
@@ -9175,7 +9175,7 @@ texture = ExtResource("5_pvfbs")
 47:47/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ctei"]
-texture = ExtResource("6_uvvsf")
+texture = ExtResource("13_oltaa")
 1:1/0 = 0
 2:1/0 = 0
 4:1/0 = 0
@@ -10503,7 +10503,7 @@ texture = ExtResource("6_uvvsf")
 19:55/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ty36s"]
-texture = ExtResource("8_ijngx")
+texture = ExtResource("14_2j0a4")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -12766,7 +12766,7 @@ texture = ExtResource("8_ijngx")
 31:31/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kvlbi"]
-texture = ExtResource("9_vtgx2")
+texture = ExtResource("15_6bnkr")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -13623,7 +13623,7 @@ sources/15 = SubResource("TileSetAtlasSource_413ye")
 sources/16 = SubResource("TileSetAtlasSource_kq5mj")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qcdss"]
-texture = ExtResource("6_0453v")
+texture = ExtResource("6_cuqo5")
 2:0/0 = 0
 3:0/0 = 0
 4:0/0 = 0
@@ -14285,7 +14285,7 @@ tile_set = SubResource("TileSet_ln8qf")
 format = 2
 layer_0/tile_data = PackedInt32Array(-1310740, 1376257, 268435468, -1245204, 1376257, 268435469, -1179668, 1376257, 268435470, -1114132, 1376257, 268435470, -1048596, 1376257, 268435470, -983060, 1376257, 268435471, -1310739, 1310721, 268435468, -1245203, 1310721, 13, -1179667, 1310721, 14, -1114131, 1310721, 14, -1048595, 1310721, 14, -983059, 1310721, 15, -1310738, 1310721, 268435468, -1245202, 1310721, 268435470, -1179666, 1310721, 14, -1114130, 1310721, 14, -1048594, 1310721, 14, -983058, 1310721, 15, -1310737, 1310721, 12, -1245201, 1310721, 14, -1179665, 1310721, 14, -1114129, 1310721, 14, -1048593, 1310721, 14, -983057, 1310721, 15, -1310736, 1310721, 12, -1245200, 1310721, 13, -1179664, 1310721, 13, -1114128, 1310721, 13, -1048592, 1310721, 13, -983056, 1310721, 15, -1310735, 1376257, 12, -1245199, 1376257, 13, -1179663, 1376257, 13, -1114127, 1376257, 13, -1048591, 1376257, 13, -983055, 1376257, 15)
 
-[node name="protagonista" parent="." instance=ExtResource("1_1sspg")]
+[node name="protagonista" parent="." instance=ExtResource("16_687sj")]
 position = Vector2(-352, 184)
 
 [node name="Camera2D" type="Camera2D" parent="." groups=["camera"]]

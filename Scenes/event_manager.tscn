@@ -14,22 +14,26 @@ size = Vector2(1016.53, 1016.53)
 script = ExtResource("1_84tb0")
 
 [node name="ouija_red" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(564.562, 312.562)
 scale = Vector2(0.0791448, 0.0791448)
 texture = ExtResource("2_jd4kx")
 
 [node name="Area2DRed" type="Area2D" parent="ouija_red"]
+collision_layer = 2
 
 [node name="CollisionShape2DRed" type="CollisionShape2D" parent="ouija_red/Area2DRed"]
 position = Vector2(0.000488281, 0)
 shape = SubResource("RectangleShape2D_svtft")
 
 [node name="ouija_blue" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(564.375, 312.375)
 scale = Vector2(0.0441895, 0.0441895)
 texture = ExtResource("3_27h0b")
 
 [node name="Area2DBlue" type="Area2D" parent="ouija_blue"]
+collision_layer = 2
 
 [node name="CollisionShape2DBlue" type="CollisionShape2D" parent="ouija_blue/Area2DBlue"]
 position = Vector2(-0.000976563, 0)

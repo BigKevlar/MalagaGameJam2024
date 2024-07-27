@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cns5qs4uvrsf8"
-path="res://.godot/imported/img010.webp-905ab63c13f5d473e8cb146d56ff0d83.ctex"
+uid="uid://dit5jjjojmm08"
+path="res://.godot/imported/yellow.png-cf0d21adf438c064d77c5d9d09c5e383.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Imágenes Polo Digital/img010.webp"
-dest_files=["res://.godot/imported/img010.webp-905ab63c13f5d473e8cb146d56ff0d83.ctex"]
+source_file="res://Textures/yellow.png"
+dest_files=["res://.godot/imported/yellow.png-cf0d21adf438c064d77c5d9d09c5e383.ctex"]
 
 [params]
 

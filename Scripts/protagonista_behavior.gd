@@ -1,16 +1,23 @@
 extends Node2D
 
+<<<<<<< HEAD
 @onready var animated_sprite_2d = $protagonista/AnimatedSprite2D
+=======
+const VELOCIDAD_PERSONAJE : float = 3.0
+
+@onready var animated_sprite_2d = $AnimatedSprite2D
+@onready var area_2d = $Area2D
+>>>>>>> 07a5f6fc66c8777ba8d08b35238e7c25919e9717
 
 func _physics_process(delta):
 	if Input.is_action_pressed("Left"):
-		position.x -= 1
+		position.x -= VELOCIDAD_PERSONAJE
 	if Input.is_action_pressed("Right"):
-		position.x += 1
+		position.x += VELOCIDAD_PERSONAJE
 	if Input.is_action_pressed("Down"):
-		position.y += 1
+		position.y += VELOCIDAD_PERSONAJE
 	if Input.is_action_pressed("Up"):
-		position.y -= 1
+		position.y -= VELOCIDAD_PERSONAJE
 
 func _input(event):
 	if event.is_action_pressed("Left"):

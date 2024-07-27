@@ -2,9 +2,12 @@ extends Node2D
 
 const CENTRO_PANTALLA = Vector2(0, 0)
 
+@onready var texto_ouija : String= "res://Scripts/texto_ouija.txt"
+var texto_ouija_array : Array = []
 var eventos_array : Array = []
 var posiciones_ouija_red : Array = []
 var posiciones_ouija_blue : Array = []
+var buscando_ouijas : bool = false
 
 @onready var evento_index : int = 0
 
@@ -17,12 +20,20 @@ var ouija_blue_pos : Vector2
 @onready var collision_shape_2d_blue = $ouija_blue/Area2DBlue/CollisionShape2DBlue
 
 @onready var cuadro_dialogo = get_tree().get_first_node_in_group("dialogo")
-
 @onready var protagonista = get_tree().get_first_node_in_group("protagonista")
+@onready var losetas = get_tree().get_first_node_in_group("losetas")
 
 var tween
 
 func _ready():
+	
+	var file = FileAccess.open(texto_ouija, FileAccess.READ)
+	while not file.eof_reached():
+		texto_ouija_array.append(file.get_line())
+	texto_ouija_array.remove_at(texto_ouija_array.size()-1)
+	file.close()
+	
+	
 	var rnd = RandomNumberGenerator.new()
 	for i in 3:
 		
@@ -41,14 +52,6 @@ func _ready():
 		posiciones_ouija_blue.append(ouija_blue_pos)
 		posiciones_ouija_red.append(ouija_red_pos)
 	print(eventos_array)
-	
-	collision_shape_2d_blue.disabled = true
-	collision_shape_2d_red.disabled = true
-	print("desactivado")
-	await movimiento_ouijas()
-	collision_shape_2d_blue.disabled = false
-	collision_shape_2d_red.disabled = false
-	print("activado")
 
 func movimiento_ouijas():
 	ouija_blue.position = CENTRO_PANTALLA
@@ -60,39 +63,55 @@ func movimiento_ouijas():
 	await get_tree().create_timer(1).timeout
 
 func _on_area_2d_red_area_entered(area):
-	if area == protagonista.area_2d:
-		if evento_index < eventos_array.size():
-			if eventos_array[evento_index] == 0:
-				print("has muerto")
-			
-			elif eventos_array[evento_index] == 1:
-				cuadro_dialogo.texto = []
-				cuadro_dialogo.texto.append("mala noticia")
-				cuadro_dialogo.abrir_dialogo()
-				evento_index += 1
-				if evento_index < eventos_array.size():
-					collision_shape_2d_blue.disabled = true
-					collision_shape_2d_red.disabled = true
-					await movimiento_ouijas()
-					collision_shape_2d_blue.disabled = false
-					collision_shape_2d_red.disabled = false
+	if evento_index < eventos_array.size():
+		if eventos_array[evento_index] == 0:
+			print("has muerto")
+		
+		elif eventos_array[evento_index] == 1:
+			activar_losetas()
+			buscando_ouijas = false
+			ouija_blue.hide()
+			ouija_red.hide()
+			print(texto_ouija_array)
+			cuadro_dialogo.texto = []
+			cuadro_dialogo.texto.append(texto_ouija_array[evento_index])
+			if evento_index == 2:
+				cuadro_dialogo.texto.append(texto_ouija_array[evento_index+1])
+				#quitar cortina y activar la siguiente planta
+			cuadro_dialogo.abrir_dialogo()
+			evento_index += 1
 
 
 func _on_area_2d_blue_area_entered(area):
-	if area == protagonista.area_2d:
-		if evento_index < eventos_array.size():
-			if eventos_array[evento_index] == 1:
-				print("has muerto")
-			
-			elif eventos_array[evento_index] == 0:
-				cuadro_dialogo.texto = []
-				cuadro_dialogo.texto.append("mala noticia")
-				cuadro_dialogo.abrir_dialogo()
-				evento_index += 1
-				if evento_index < eventos_array.size():
-					collision_shape_2d_blue.disabled = true
-					collision_shape_2d_red.disabled = true
-					await movimiento_ouijas()
-					collision_shape_2d_blue.disabled = false
-					collision_shape_2d_red.disabled = false
-					
+	if evento_index < eventos_array.size():
+		if eventos_array[evento_index] == 1:
+			print("has muerto")
+		
+		elif eventos_array[evento_index] == 0:
+			activar_losetas()
+			buscando_ouijas = false
+			ouija_blue.hide()
+			ouija_red.hide()
+			print(texto_ouija_array)
+			cuadro_dialogo.texto = []
+			cuadro_dialogo.texto.append(texto_ouija_array[evento_index])
+			if evento_index == 2:
+				cuadro_dialogo.texto.append(texto_ouija_array[evento_index+1])
+				#quitar cortina y activar la siguiente planta
+			cuadro_dialogo.abrir_dialogo()
+			evento_index += 1
+
+func desactivar_losetas():
+	for i in losetas.get_children():
+		i.hide()
+		i.collision_shape_2d.disabled = true
+
+func activar_losetas():
+	for i in losetas.get_children():
+		i.show()
+		i.collision_shape_2d.disabled = false
+
+func mostrar_ouijas():
+	buscando_ouijas = true
+	ouija_blue.show()
+	ouija_red.show()

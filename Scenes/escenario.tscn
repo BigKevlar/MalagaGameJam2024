@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://tbg6x4aw31i4"]
+[gd_scene load_steps=3 format=3 uid="uid://tbg6x4aw31i4"]
+
+[ext_resource type="PackedScene" uid="uid://b28p1wvjm8dp7" path="res://Scenes/protagonista.tscn" id="1_1sspg"]
+
+[sub_resource type="TileSet" id="TileSet_8qule"]
+tile_size = Vector2i(64, 64)
 
 [node name="escenario" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-32, -32)
+
+[node name="Node2D" parent="." instance=ExtResource("1_1sspg")]
+position = Vector2(-32, -8)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_8qule")
+format = 2

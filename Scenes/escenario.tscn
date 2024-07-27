@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=34 format=3 uid="uid://tbg6x4aw31i4"]
+=======
+[gd_scene load_steps=17 format=3 uid="uid://buw6k0dcf3feu"]
+>>>>>>> 80a61789b47f548b4320a3b06687e7c14656b30c
 
 [ext_resource type="PackedScene" uid="uid://b28p1wvjm8dp7" path="res://Scenes/protagonista.tscn" id="1_1sspg"]
 [ext_resource type="Texture2D" uid="uid://hsrijdb3o01k" path="res://Textures/pared.png" id="2_jrbbp"]
@@ -11,10 +15,15 @@
 [ext_resource type="Texture2D" uid="uid://cjxwa8fqtyvki" path="res://Textures/escalera.PNG" id="5_u3gh2"]
 [ext_resource type="Texture2D" uid="uid://cbwwvrkhf3jno" path="res://Textures/puerta escalera.png" id="6_0453v"]
 [ext_resource type="Texture2D" uid="uid://bygo4mj441pnl" path="res://Textures/mesa.png" id="6_uvvsf"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://dr7jc0e8inkej" path="res://Textures/patio_interior.webp" id="7_iut6r"]
 [ext_resource type="Texture2D" uid="uid://bwasav6cixk4g" path="res://Textures/agujero.png" id="8_35rvv"]
 [ext_resource type="Texture2D" uid="uid://cer1bklsy1h8r" path="res://Textures/cojines.png" id="8_ijngx"]
 [ext_resource type="Texture2D" uid="uid://dwttjqngadynn" path="res://Textures/puertas-ventanas.png" id="9_vtgx2"]
+=======
+[ext_resource type="PackedScene" uid="uid://dv4b1b5nnjdle" path="res://Scenes/event_manager.tscn" id="8_686vv"]
+[ext_resource type="PackedScene" uid="uid://dvpe5rqdpg3si" path="res://Scenes/prueba_dialogo_ui.tscn" id="9_ikrlx"]
+>>>>>>> 80a61789b47f548b4320a3b06687e7c14656b30c
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y2ys0"]
 texture = ExtResource("2_tu4vb")
@@ -13139,6 +13148,7 @@ layer_4/tile_data = PackedInt32Array(-1769450, 1179656, 19, -1703914, 1179656, 2
 layer_5/name = "X"
 layer_5/tile_data = PackedInt32Array(-1572886, 393226, 15, -1507350, 393226, 16, -1441814, 393226, 17, -1572885, 458762, 15, -1507349, 458762, 16, -1441813, 458762, 17, -1572884, 524298, 15, -1507348, 524298, 16, -1441812, 524298, 17, -1638374, 655370, 15, -1572838, 655370, 16, -1507302, 655370, 17, -1638373, 720906, 15, -1572837, 720906, 16, -1507301, 720906, 17, -786423, 1310725, 12, -720887, 1310725, 13, -786422, 1376261, 12, -720886, 1376261, 13, -786421, 1310725, 12, -720885, 1310725, 13, -786420, 1376261, 12, -720884, 1376261, 13, 786424, 1835016, 1610612761, 786425, 1835016, 1610612760, 786426, 1835016, 1610612761, 786427, 1835016, 1610612760, 786423, 1835016, 1610612760, 786428, 1835016, 1610612761, 786429, 1835016, 1610612760, 786430, 1835016, 1610612761, 786431, 1835016, 1610612760, 720896, 1835016, 1610612761)
 
+<<<<<<< HEAD
 [node name="protagonista" parent="." instance=ExtResource("1_1sspg")]
 position = Vector2(-352, 184)
 
@@ -13149,3 +13159,19 @@ position = Vector2(0, -40)
 tile_set = SubResource("TileSet_ln8qf")
 format = 2
 layer_0/tile_data = PackedInt32Array(-1376271, 1376257, 12, -1310735, 1376257, 13, -1245199, 1376257, 13, -1376276, 1376257, 268435468, -1310740, 1376257, 268435469, -1245204, 1376257, 268435470, -1179663, 1376257, 13, -1114127, 1376257, 13, -1179668, 1376257, 268435470, -1114132, 1376257, 268435470, -1048591, 1376257, 15, -1048596, 1376257, 268435471, -1310736, 1310721, 13, -1245200, 1310721, 13, -1310739, 1310721, 13, -1245203, 1310721, 14, -1179667, 1310721, 14, -1114131, 1310721, 14, -1179664, 1310721, 13, -1114128, 1310721, 13, -1048595, 1310721, 15, -1048592, 1310721, 15, -1376272, 1310721, 12, -1376275, 1310721, 268435468, -1048594, 1310721, 15, -1048593, 1310721, 15, -1114130, 1310721, 14, -1179666, 1310721, 14, -1245202, 1310721, 14, -1114129, 1310721, 14, -1179665, 1310721, 14, -1245201, 1310721, 14, -1310737, 1310721, 14, -1310738, 1310721, 268435470, -1376273, 1310721, 12, -1376274, 1310721, 268435468)
+=======
+[node name="EventManager" parent="." instance=ExtResource("8_686vv")]
+
+[node name="protagonista" parent="." groups=["protagonista"] instance=ExtResource("1_1sspg")]
+position = Vector2(-120, 48)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+position = Vector2(-24, -24)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="PruebaDialogoUi" parent="CanvasLayer" groups=["dialogo"] instance=ExtResource("9_ikrlx")]
+visible = false
+>>>>>>> 80a61789b47f548b4320a3b06687e7c14656b30c

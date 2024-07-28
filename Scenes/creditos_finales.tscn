@@ -1,0 +1,79 @@
+[gd_scene load_steps=2 format=3 uid="uid://bv6edtpyyq0s5"]
+
+[ext_resource type="Script" path="res://Scripts/creditos_finales.gd" id="1_ywpxo"]
+
+[node name="CreditosFinales" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ywpxo")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.5
+offset_top = -73.5
+offset_right = 126.5
+offset_bottom = 73.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Créditos:
+"
+
+[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Leia Martin (leiamart 42)
+Sergio Ternero (sternero 42)
+Juan Carlos Martos (jmartos- 42)
+Santiago Llamas (tetsuhi)"
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "GRACIAS POR JUGAR!!!"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -136.0
+offset_right = 20.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 100
+
+[node name="boton_volver" type="Button" parent="HBoxContainer2"]
+custom_minimum_size = Vector2(200, 43)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Volver a jugar"
+
+[node name="boton_cerrar" type="Button" parent="HBoxContainer2"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Salir del juego"
+
+[connection signal="pressed" from="HBoxContainer2/boton_volver" to="." method="_on_boton_volver_pressed"]
+[connection signal="pressed" from="HBoxContainer2/boton_cerrar" to="." method="_on_boton_cerrar_pressed"]

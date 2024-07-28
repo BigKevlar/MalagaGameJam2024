@@ -1,6 +1,6 @@
 extends Node2D
 
-const CENTRO_PANTALLA = Vector2(0, 0)
+const CENTRO_PANTALLA = Vector2(1152/2, 648/2)
 
 @onready var texto_ouija : String= "res://Scripts/texto_ouija.txt"
 var texto_ouija_array : Array = []
@@ -8,6 +8,9 @@ var eventos_array : Array = []
 var posiciones_ouija_red : Array = []
 var posiciones_ouija_blue : Array = []
 var buscando_ouijas : bool = false
+@onready var ouija_texture = $"../ouija_texture"
+@onready var cortinas = $"../cortinas"
+var nivel_finalizado : bool = false
 
 @onready var evento_index : int = 0
 
@@ -40,20 +43,21 @@ func _ready():
 		var pos_muerte = rnd.randi_range(0, 1)
 		eventos_array.append(pos_muerte)
 		
-		ouija_blue_pos.x = rnd.randi_range(-500, 500)
-		ouija_blue_pos.y = rnd.randi_range(-250, 250)
-		ouija_red_pos.x = rnd.randi_range(-500, 500)
-		ouija_red_pos.y = rnd.randi_range(-250, 250)
-		while ouija_blue_pos.distance_to(ouija_red_pos) <= 100:
-			ouija_blue_pos.x = rnd.randi_range(-500, 500)
-			ouija_blue_pos.y = rnd.randi_range(-250, 250)
-			ouija_red_pos.x = rnd.randi_range(-500, 500)
-			ouija_red_pos.y = rnd.randi_range(-250, 250)
+		ouija_blue_pos.x = rnd.randi_range(100, 1000)
+		ouija_blue_pos.y = rnd.randi_range(75, 500)
+		ouija_red_pos.x = rnd.randi_range(100, 1000)
+		ouija_red_pos.y = rnd.randi_range(75, 500)
+		while ouija_blue_pos.distance_to(ouija_red_pos) <= 200:
+			ouija_blue_pos.x = rnd.randi_range(100, 1000)
+			ouija_blue_pos.y = rnd.randi_range(75, 500)
+			ouija_red_pos.x = rnd.randi_range(100, 1000)
+			ouija_red_pos.y = rnd.randi_range(75, 500)
 		posiciones_ouija_blue.append(ouija_blue_pos)
 		posiciones_ouija_red.append(ouija_red_pos)
 	print(eventos_array)
 
 func movimiento_ouijas():
+	ouija_texture.show()
 	ouija_blue.position = CENTRO_PANTALLA
 	ouija_red.position = CENTRO_PANTALLA
 	tween = get_tree().create_tween()
@@ -77,7 +81,8 @@ func _on_area_2d_red_area_entered(area):
 			cuadro_dialogo.texto.append(texto_ouija_array[evento_index])
 			if evento_index == 2:
 				cuadro_dialogo.texto.append(texto_ouija_array[evento_index+1])
-				#quitar cortina y activar la siguiente planta
+				nivel_finalizado = true
+				cortinas.hide()
 			cuadro_dialogo.abrir_dialogo()
 			evento_index += 1
 
@@ -97,7 +102,8 @@ func _on_area_2d_blue_area_entered(area):
 			cuadro_dialogo.texto.append(texto_ouija_array[evento_index])
 			if evento_index == 2:
 				cuadro_dialogo.texto.append(texto_ouija_array[evento_index+1])
-				#quitar cortina y activar la siguiente planta
+				nivel_finalizado = true
+				cortinas.hide()
 			cuadro_dialogo.abrir_dialogo()
 			evento_index += 1
 
@@ -115,3 +121,8 @@ func mostrar_ouijas():
 	buscando_ouijas = true
 	ouija_blue.show()
 	ouija_red.show()
+
+
+func _on_final_planta_baja_area_entered(area):
+	if nivel_finalizado:
+		print("carga la siguiente escena")

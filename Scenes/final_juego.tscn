@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ds57b4bhfijy3"]
+
+[ext_resource type="Script" path="res://Scripts/final_juego.gd" id="1_bpoyv"]
+[ext_resource type="PackedScene" uid="uid://dvpe5rqdpg3si" path="res://Scenes/prueba_dialogo_ui.tscn" id="2_1ue83"]
+
+[node name="FinalJuego" type="Node2D"]
+script = ExtResource("1_bpoyv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PruebaDialogoUi" parent="CanvasLayer" groups=["dialogo"] instance=ExtResource("2_1ue83")]
+process_mode = 3
+visible = false
+anchors_preset = 12
+anchor_top = 1.0
+grow_vertical = 0

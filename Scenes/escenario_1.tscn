@@ -14,8 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://bygo4mj441pnl" path="res://Textures/mesa.png" id="13_oltaa"]
 [ext_resource type="Texture2D" uid="uid://cer1bklsy1h8r" path="res://Textures/cojines.png" id="14_2j0a4"]
 [ext_resource type="Texture2D" uid="uid://dwttjqngadynn" path="res://Textures/puertas-ventanas.png" id="15_6bnkr"]
+[ext_resource type="Texture2D" uid="uid://cgdf4oyaafry0" path="res://Textures/ouija-removebg-preview.png" id="15_c30rv"]
 [ext_resource type="PackedScene" uid="uid://b28p1wvjm8dp7" path="res://Scenes/protagonista.tscn" id="16_687sj"]
-[ext_resource type="Texture2D" uid="uid://dit5jjjojmm08" path="res://Textures/yellow.png" id="16_nv4bq"]
 [ext_resource type="Script" path="res://Scripts/evento_baldosa.gd" id="17_3foo8"]
 [ext_resource type="Script" path="res://Scripts/evento_baldosa2.gd" id="18_n65a5"]
 [ext_resource type="Script" path="res://Scripts/evento_baldosa3.gd" id="19_cwkry"]
@@ -14265,7 +14265,7 @@ texture = ExtResource("6_cuqo5")
 sources/1 = SubResource("TileSetAtlasSource_qcdss")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_scn12"]
-size = Vector2(223.784, 184.865)
+size = Vector2(542.201, 542.2)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eburc"]
 size = Vector2(34, 50)
@@ -14299,22 +14299,22 @@ layer_0/tile_data = PackedInt32Array(196625, 1310721, 13, 262161, 1310721, 14, 3
 position = Vector2(400, 464)
 
 [node name="Loseta_Evento" type="Sprite2D" parent="losetas"]
-position = Vector2(-119.125, -25.125)
-scale = Vector2(0.205556, 0.205556)
-texture = ExtResource("16_nv4bq")
+position = Vector2(-168, 16)
+scale = Vector2(0.088528, 0.088528)
+texture = ExtResource("15_c30rv")
 script = ExtResource("17_3foo8")
 
 [node name="Area2D" type="Area2D" parent="losetas/Loseta_Evento"]
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="losetas/Loseta_Evento/Area2D"]
-position = Vector2(0.608093, -18.8513)
+position = Vector2(21.1009, -18.2764)
 shape = SubResource("RectangleShape2D_scn12")
 
 [node name="Loseta_Evento2" type="Sprite2D" parent="losetas"]
-position = Vector2(217, -121)
-scale = Vector2(0.205556, 0.205556)
-texture = ExtResource("16_nv4bq")
+position = Vector2(216, -93.611)
+scale = Vector2(0.096, 0.096)
+texture = ExtResource("15_c30rv")
 script = ExtResource("18_n65a5")
 
 [node name="Area2D" type="Area2D" parent="losetas/Loseta_Evento2"]
@@ -14325,9 +14325,9 @@ position = Vector2(0.608093, -18.8513)
 shape = SubResource("RectangleShape2D_scn12")
 
 [node name="Loseta_Evento3" type="Sprite2D" parent="losetas"]
-position = Vector2(-71, -217)
-scale = Vector2(0.205556, 0.205556)
-texture = ExtResource("16_nv4bq")
+position = Vector2(-41.8055, -187.805)
+scale = Vector2(0.088778, 0.088778)
+texture = ExtResource("15_c30rv")
 script = ExtResource("19_cwkry")
 
 [node name="Area2D" type="Area2D" parent="losetas/Loseta_Evento3"]

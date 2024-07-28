@@ -4,7 +4,7 @@ const CENTRO_PANTALLA = Vector2(1152/2, 648/2)
 
 @onready var texto_ouija : String= "res://Scripts/texto_ouija.txt"
 var texto_ouija_array : Array = []
-var eventos_array : Array = []
+var eventos_array : Array = [1, 0, 1]
 var posiciones_ouija_red : Array = []
 var posiciones_ouija_blue : Array = []
 var buscando_ouijas : bool = false
@@ -40,8 +40,8 @@ func _ready():
 	var rnd = RandomNumberGenerator.new()
 	for i in 3:
 		
-		var pos_muerte = rnd.randi_range(0, 1)
-		eventos_array.append(pos_muerte)
+#		var pos_muerte = rnd.randi_range(0, 1)
+#		eventos_array.append(pos_muerte)
 		
 		ouija_blue_pos.x = rnd.randi_range(100, 1000)
 		ouija_blue_pos.y = rnd.randi_range(75, 500)
@@ -69,7 +69,7 @@ func movimiento_ouijas():
 func _on_area_2d_red_area_entered(area):
 	if evento_index < eventos_array.size():
 		if eventos_array[evento_index] == 0:
-			print("has muerto")
+			get_tree().change_scene_to_file("res://Scenes/muerte.tscn")
 		
 		elif eventos_array[evento_index] == 1:
 			activar_losetas()
@@ -90,7 +90,7 @@ func _on_area_2d_red_area_entered(area):
 func _on_area_2d_blue_area_entered(area):
 	if evento_index < eventos_array.size():
 		if eventos_array[evento_index] == 1:
-			print("has muerto")
+			get_tree().change_scene_to_file("res://Scenes/muerte.tscn")
 		
 		elif eventos_array[evento_index] == 0:
 			activar_losetas()

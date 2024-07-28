@@ -2,7 +2,7 @@ extends Node2D
 
 const CENTRO_PANTALLA = Vector2(1152/2, 648/2)
 
-@onready var texto_ouija : String= "res://Scripts/texto_ouija.txt"
+@onready var texto_ouija : String= "res://Scripts/texto_ouija2.txt"
 var texto_ouija_array : Array = []
 var eventos_array : Array = [1, 0, 1]
 var posiciones_ouija_red : Array = []
@@ -26,9 +26,17 @@ var ouija_blue_pos : Vector2
 @onready var protagonista = get_tree().get_first_node_in_group("protagonista")
 @onready var losetas = get_tree().get_first_node_in_group("losetas")
 
+@onready var sfx_audio_player = $"../SFXAudioPlayer"
+@onready var audio_stream_player = $"../AudioStreamPlayer"
+var sfx_audio_array : Array = ["res://Audio/efectos de sonido/psicofonia. nadie te puede salvar.wav", "res://Audio/efectos de sonido/heartbeat.wav", "res://Audio/efectos de sonido/dirtydoorscare.wav"]
+var audio_a_reproducir : Array = []
+const ATMOSPHERE_HORROR_3 = preload("res://Audio/musica ambiente/atmosphere horror 3.ogg")
+const CLOCK_BELLS = preload("res://Audio/efectos de sonido/clock bells.wav")
 var tween
 
 func _ready():
+	audio_stream_player.stream = ATMOSPHERE_HORROR_3
+	audio_stream_player.play()
 	
 	var file = FileAccess.open(texto_ouija, FileAccess.READ)
 	while not file.eof_reached():
@@ -36,9 +44,11 @@ func _ready():
 	texto_ouija_array.remove_at(texto_ouija_array.size()-1)
 	file.close()
 	
-	
 	var rnd = RandomNumberGenerator.new()
 	for i in 3:
+		
+		var audio_cosa = load(sfx_audio_array[i])
+		audio_a_reproducir.append(audio_cosa)
 		
 #		var pos_muerte = rnd.randi_range(0, 1)
 #		eventos_array.append(pos_muerte)
@@ -72,6 +82,8 @@ func _on_area_2d_red_area_entered(area):
 			get_tree().change_scene_to_file("res://Scenes/muerte.tscn")
 		
 		elif eventos_array[evento_index] == 1:
+			sfx_audio_player.stream = audio_a_reproducir[evento_index]
+			sfx_audio_player.play()
 			activar_losetas()
 			buscando_ouijas = false
 			ouija_blue.hide()
@@ -83,6 +95,8 @@ func _on_area_2d_red_area_entered(area):
 				cuadro_dialogo.texto.append(texto_ouija_array[evento_index+1])
 				nivel_finalizado = true
 				se_al_3_er_piso.hide()
+				sfx_audio_player.stream = CLOCK_BELLS
+				sfx_audio_player.play()
 			cuadro_dialogo.abrir_dialogo()
 			evento_index += 1
 
@@ -93,6 +107,8 @@ func _on_area_2d_blue_area_entered(area):
 			get_tree().change_scene_to_file("res://Scenes/muerte.tscn")
 		
 		elif eventos_array[evento_index] == 0:
+			sfx_audio_player.stream = audio_a_reproducir[evento_index]
+			sfx_audio_player.play()
 			activar_losetas()
 			buscando_ouijas = false
 			ouija_blue.hide()
@@ -104,6 +120,8 @@ func _on_area_2d_blue_area_entered(area):
 				cuadro_dialogo.texto.append(texto_ouija_array[evento_index+1])
 				nivel_finalizado = true
 				se_al_3_er_piso.hide()
+				sfx_audio_player.stream = CLOCK_BELLS
+				sfx_audio_player.play()
 			cuadro_dialogo.abrir_dialogo()
 			evento_index += 1
 

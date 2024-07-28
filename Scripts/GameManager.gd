@@ -26,19 +26,30 @@ var ouija_blue_pos : Vector2
 @onready var protagonista = get_tree().get_first_node_in_group("protagonista")
 @onready var losetas = get_tree().get_first_node_in_group("losetas")
 
+@onready var sfx_audio_player = $"../SFXAudioPlayer"
+@onready var audio_stream_player = $"../AudioStreamPlayer"
+var sfx_audio_array : Array = ["res://Audio/efectos de sonido/dirty door.wav","res://Audio/efectos de sonido/jumpscare.wav", "res://Audio/efectos de sonido/knock on door.wav"]
+var audio_a_reproducir : Array = []
+const ATMOSPHERE_HORROR_2 = preload("res://Audio/musica ambiente/atmosphere horror 2.ogg")
+const CURTAIN = preload("res://Audio/efectos de sonido/curtain.wav")
 var tween
 
 func _ready():
+	
+	audio_stream_player.stream = ATMOSPHERE_HORROR_2
+	audio_stream_player.play()
 	
 	var file = FileAccess.open(texto_ouija, FileAccess.READ)
 	while not file.eof_reached():
 		texto_ouija_array.append(file.get_line())
 	texto_ouija_array.remove_at(texto_ouija_array.size()-1)
-	file.close()
-	
+	file.close()	
 	
 	var rnd = RandomNumberGenerator.new()
 	for i in 3:
+		
+		var audio_cosa = load(sfx_audio_array[i])
+		audio_a_reproducir.append(audio_cosa)
 		
 #		var pos_muerte = rnd.randi_range(0, 1)
 #		eventos_array.append(pos_muerte)
@@ -72,6 +83,8 @@ func _on_area_2d_red_area_entered(area):
 			get_tree().change_scene_to_file("res://Scenes/muerte.tscn")
 		
 		elif eventos_array[evento_index] == 1:
+			sfx_audio_player.stream = audio_a_reproducir[evento_index]
+			sfx_audio_player.play()
 			activar_losetas()
 			buscando_ouijas = false
 			ouija_blue.hide()
@@ -83,6 +96,8 @@ func _on_area_2d_red_area_entered(area):
 				cuadro_dialogo.texto.append(texto_ouija_array[evento_index+1])
 				nivel_finalizado = true
 				cortinas.hide()
+				sfx_audio_player.stream = CURTAIN
+				sfx_audio_player.play()
 			cuadro_dialogo.abrir_dialogo()
 			evento_index += 1
 
@@ -93,6 +108,8 @@ func _on_area_2d_blue_area_entered(area):
 			get_tree().change_scene_to_file("res://Scenes/muerte.tscn")
 		
 		elif eventos_array[evento_index] == 0:
+			sfx_audio_player.stream = audio_a_reproducir[evento_index]
+			sfx_audio_player.play()
 			activar_losetas()
 			buscando_ouijas = false
 			ouija_blue.hide()
@@ -104,6 +121,8 @@ func _on_area_2d_blue_area_entered(area):
 				cuadro_dialogo.texto.append(texto_ouija_array[evento_index+1])
 				nivel_finalizado = true
 				cortinas.hide()
+				sfx_audio_player.stream = CURTAIN
+				sfx_audio_player.play()
 			cuadro_dialogo.abrir_dialogo()
 			evento_index += 1
 

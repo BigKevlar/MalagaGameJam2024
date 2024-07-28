@@ -4,6 +4,8 @@ var texto_final : String = "res://Scripts/texto_final.txt"
 var texto_array : Array = []
 @onready var cuadro_dialogo = get_tree().get_first_node_in_group("dialogo")
 var texto_index : int = 0
+const LUGUBRE = preload("res://Audio/banda sonorsa intro y final/lugubre.ogg")
+@onready var audio_stream_player = $AudioStreamPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,6 +18,9 @@ func _ready():
 	cuadro_dialogo.texto = []
 	cuadro_dialogo.texto = texto_array
 	cuadro_dialogo.abrir_dialogo()
+	
+	audio_stream_player.stream = LUGUBRE
+	audio_stream_player.play()
 	
 func _process(delta):
 	if cuadro_dialogo.texto_finalizado:

@@ -9,8 +9,8 @@ var posiciones_ouija_red : Array = []
 var posiciones_ouija_blue : Array = []
 var buscando_ouijas : bool = false
 @onready var ouija_texture = $"../ouija_texture"
-@onready var cortinas = $"../cortinas"
 var nivel_finalizado : bool = false
+@onready var se_al_3_er_piso = $"../señal 3er piso"
 
 @onready var evento_index : int = 0
 
@@ -82,7 +82,7 @@ func _on_area_2d_red_area_entered(area):
 			if evento_index == 2:
 				cuadro_dialogo.texto.append(texto_ouija_array[evento_index+1])
 				nivel_finalizado = true
-				cortinas.hide()
+				se_al_3_er_piso.hide()
 			cuadro_dialogo.abrir_dialogo()
 			evento_index += 1
 
@@ -103,7 +103,7 @@ func _on_area_2d_blue_area_entered(area):
 			if evento_index == 2:
 				cuadro_dialogo.texto.append(texto_ouija_array[evento_index+1])
 				nivel_finalizado = true
-				cortinas.hide()
+				se_al_3_er_piso.hide()
 			cuadro_dialogo.abrir_dialogo()
 			evento_index += 1
 
@@ -123,6 +123,11 @@ func mostrar_ouijas():
 	ouija_red.show()
 
 
-func _on_final_planta_baja_area_entered(area):
+#func _on_final_planta_baja_area_entered(area):
+#	if nivel_finalizado:
+#		print("carga la siguiente escena")
+
+
+func _on_area_2d_area_entered(area):
 	if nivel_finalizado:
-		get_tree().change_scene_to_file("res://Scenes/escenario_2.tscn")
+		get_tree().change_scene_to_file("res://Scenes/final_juego.tscn")

@@ -1,9 +1,8 @@
-[gd_scene load_steps=45 format=3 uid="uid://cnmw37wamlb2s"]
+[gd_scene load_steps=44 format=3 uid="uid://cnmw37wamlb2s"]
 
 [ext_resource type="Texture2D" uid="uid://dujw5angrv2d8" path="res://Textures/suelo.png" id="1_mj7vw"]
 [ext_resource type="Texture2D" uid="uid://hsrijdb3o01k" path="res://Textures/pared.png" id="2_n0qr2"]
 [ext_resource type="Texture2D" uid="uid://dvsu8gwb1dv2m" path="res://Textures/X.png" id="3_4ioay"]
-[ext_resource type="Texture2D" uid="uid://dsdjon7fc4xdi" path="res://Textures/puertas.webp" id="4_d4ru0"]
 [ext_resource type="Texture2D" uid="uid://cjxwa8fqtyvki" path="res://Textures/escalera.PNG" id="5_vt2fh"]
 [ext_resource type="Texture2D" uid="uid://cbwwvrkhf3jno" path="res://Textures/puerta escalera.png" id="6_cuqo5"]
 [ext_resource type="Texture2D" uid="uid://dr7jc0e8inkej" path="res://Textures/patio_interior.webp" id="7_5sx7c"]
@@ -16,6 +15,13 @@
 [ext_resource type="Texture2D" uid="uid://cer1bklsy1h8r" path="res://Textures/cojines.png" id="14_2j0a4"]
 [ext_resource type="Texture2D" uid="uid://dwttjqngadynn" path="res://Textures/puertas-ventanas.png" id="15_6bnkr"]
 [ext_resource type="PackedScene" uid="uid://b28p1wvjm8dp7" path="res://Scenes/protagonista.tscn" id="16_687sj"]
+[ext_resource type="Texture2D" uid="uid://dit5jjjojmm08" path="res://Textures/yellow.png" id="16_nv4bq"]
+[ext_resource type="Script" path="res://Scripts/evento_baldosa.gd" id="17_3foo8"]
+[ext_resource type="Script" path="res://Scripts/evento_baldosa2.gd" id="18_n65a5"]
+[ext_resource type="Script" path="res://Scripts/evento_baldosa3.gd" id="19_cwkry"]
+[ext_resource type="PackedScene" uid="uid://dv4b1b5nnjdle" path="res://Scenes/event_manager.tscn" id="20_jv6vt"]
+[ext_resource type="PackedScene" uid="uid://dvpe5rqdpg3si" path="res://Scenes/prueba_dialogo_ui.tscn" id="21_brg6g"]
+[ext_resource type="Texture2D" uid="uid://husxupa6dtin" path="res://OUIJA.png" id="21_mn3tg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y2ys0"]
 texture = ExtResource("1_mj7vw")
@@ -2084,7 +2090,6 @@ texture = ExtResource("3_4ioay")
 1:25/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c3qs3"]
-texture = ExtResource("4_d4ru0")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -14259,32 +14264,11 @@ texture = ExtResource("6_cuqo5")
 [sub_resource type="TileSet" id="TileSet_ln8qf"]
 sources/1 = SubResource("TileSetAtlasSource_qcdss")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5817b"]
-size = Vector2(129, 128)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_scn12"]
+size = Vector2(223.784, 184.865)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aakvm"]
-size = Vector2(256, 114)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nofb4"]
-size = Vector2(495, 144)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0amt4"]
-size = Vector2(771, 113)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lyurh"]
-size = Vector2(81, 170)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gvygj"]
-size = Vector2(1089, 97)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x4o2r"]
-size = Vector2(141, 466)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_onihh"]
-size = Vector2(29, 257)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hsck"]
-size = Vector2(101, 24)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eburc"]
+size = Vector2(34, 50)
 
 [node name="escenario" type="Node2D"]
 
@@ -14311,88 +14295,79 @@ tile_set = SubResource("TileSet_ln8qf")
 format = 2
 layer_0/tile_data = PackedInt32Array(196625, 1310721, 13, 262161, 1310721, 14, 327697, 1310721, 14, 393233, 1310721, 14, 458769, 1310721, 15, 196626, 1310721, 268435470, 262162, 1310721, 14, 327698, 1310721, 14, 393234, 1310721, 14, 458770, 1310721, 15, 196627, 1310721, 14, 262163, 1310721, 14, 327699, 1310721, 14, 393235, 1310721, 14, 458771, 1310721, 15, 196628, 1310721, 13, 262164, 1310721, 13, 327700, 1310721, 13, 393236, 1310721, 13, 458772, 1310721, 15, 196629, 1376257, 13, 262165, 1376257, 13, 327701, 1376257, 13, 393237, 1376257, 13, 458773, 1376257, 15, 131088, 1376257, 268435468, 196624, 1376257, 268435469, 262160, 1376257, 268435470, 327696, 1376257, 268435470, 393232, 1376257, 268435470, 458768, 1376257, 268435471, 131089, 1310721, 268435468, 131090, 1310721, 268435468, 131091, 1310721, 12, 131092, 1310721, 12, 131093, 1376257, 12)
 
+[node name="losetas" type="Node2D" parent="." groups=["losetas"]]
+position = Vector2(400, 464)
+
+[node name="Loseta_Evento" type="Sprite2D" parent="losetas"]
+position = Vector2(-119.125, -25.125)
+scale = Vector2(0.205556, 0.205556)
+texture = ExtResource("16_nv4bq")
+script = ExtResource("17_3foo8")
+
+[node name="Area2D" type="Area2D" parent="losetas/Loseta_Evento"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="losetas/Loseta_Evento/Area2D"]
+position = Vector2(0.608093, -18.8513)
+shape = SubResource("RectangleShape2D_scn12")
+
+[node name="Loseta_Evento2" type="Sprite2D" parent="losetas"]
+position = Vector2(217, -121)
+scale = Vector2(0.205556, 0.205556)
+texture = ExtResource("16_nv4bq")
+script = ExtResource("18_n65a5")
+
+[node name="Area2D" type="Area2D" parent="losetas/Loseta_Evento2"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="losetas/Loseta_Evento2/Area2D"]
+position = Vector2(0.608093, -18.8513)
+shape = SubResource("RectangleShape2D_scn12")
+
+[node name="Loseta_Evento3" type="Sprite2D" parent="losetas"]
+position = Vector2(-71, -217)
+scale = Vector2(0.205556, 0.205556)
+texture = ExtResource("16_nv4bq")
+script = ExtResource("19_cwkry")
+
+[node name="Area2D" type="Area2D" parent="losetas/Loseta_Evento3"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="losetas/Loseta_Evento3/Area2D"]
+position = Vector2(0.608093, -18.8513)
+shape = SubResource("RectangleShape2D_scn12")
+
+[node name="final_planta_baja" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="final_planta_baja"]
+position = Vector2(335, 55)
+shape = SubResource("RectangleShape2D_eburc")
+
 [node name="protagonista" parent="." instance=ExtResource("16_687sj")]
 position = Vector2(232, 560)
 
-[node name="colisiones" type="Node2D" parent="."]
-
-[node name="Area2D" type="Area2D" parent="colisiones"]
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="colisiones/Area2D"]
-position = Vector2(64, 312)
-rotation = 1.57079
-shape = SubResource("RectangleShape2D_5817b")
-one_way_collision = true
-
-[node name="Area2D2" type="Area2D" parent="colisiones"]
+[node name="ouija_texture" type="TextureRect" parent="."]
 visible = false
-collision_mask = 0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 1168.0
+offset_bottom = 672.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21_mn3tg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="colisiones/Area2D2"]
-position = Vector2(128, 57)
-shape = SubResource("RectangleShape2D_aakvm")
+[node name="EventManager" parent="." groups=["event_manager"] instance=ExtResource("20_jv6vt")]
 
-[node name="Area2D3" type="Area2D" parent="colisiones"]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="PruebaDialogoUi" parent="CanvasLayer" groups=["dialogo"] instance=ExtResource("21_brg6g")]
 visible = false
-collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="colisiones/Area2D3"]
-position = Vector2(600.5, 104)
-shape = SubResource("RectangleShape2D_nofb4")
-
-[node name="Area2D4" type="Area2D" parent="colisiones"]
-visible = false
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="colisiones/Area2D4"]
-position = Vector2(782.5, 55.5)
-shape = SubResource("RectangleShape2D_0amt4")
-
-[node name="Area2D5" type="Area2D" parent="colisiones"]
-visible = false
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="colisiones/Area2D5"]
-position = Vector2(40.5, 587)
-shape = SubResource("RectangleShape2D_lyurh")
-
-[node name="Area2D6" type="Area2D" parent="colisiones"]
-visible = false
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="colisiones/Area2D6"]
-position = Vector2(64.5, 307.5)
-shape = SubResource("RectangleShape2D_5817b")
-
-[node name="Area2D7" type="Area2D" parent="colisiones"]
-visible = false
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="colisiones/Area2D7"]
-position = Vector2(623.5, 623.5)
-shape = SubResource("RectangleShape2D_gvygj")
-
-[node name="Area2D8" type="Area2D" parent="colisiones"]
-visible = false
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="colisiones/Area2D8"]
-position = Vector2(1097.5, 343)
-shape = SubResource("RectangleShape2D_x4o2r")
-
-[node name="Area2D9" type="Area2D" parent="colisiones"]
-visible = false
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="colisiones/Area2D9"]
-position = Vector2(1014.5, 279.5)
-shape = SubResource("RectangleShape2D_onihh")
-
-[node name="cortinas_piso_1" type="Area2D" parent="colisiones"]
-visible = false
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="colisiones/cortinas_piso_1"]
-position = Vector2(301.5, 116)
-shape = SubResource("RectangleShape2D_0hsck")
+[connection signal="area_entered" from="losetas/Loseta_Evento/Area2D" to="losetas/Loseta_Evento" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="losetas/Loseta_Evento2/Area2D" to="losetas/Loseta_Evento2" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="losetas/Loseta_Evento3/Area2D" to="losetas/Loseta_Evento3" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="final_planta_baja" to="EventManager" method="_on_final_planta_baja_area_entered"]

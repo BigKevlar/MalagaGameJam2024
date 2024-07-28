@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/menu_principal.gd" id="1_de1jv"]
 
 [sub_resource type="Theme" id="Theme_1ltwa"]
-default_font_size = 175
+default_font_size = 120
 
 [sub_resource type="Theme" id="Theme_lnv3o"]
 default_font_size = 35
@@ -25,13 +25,13 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -594.0
-offset_top = 96.0
+offset_top = 73.0
 offset_right = 594.0
-offset_bottom = 374.0
+offset_bottom = 411.0
 grow_horizontal = 2
 theme = SubResource("Theme_1ltwa")
 bbcode_enabled = true
-text = "[shake rate=20.0 level=2 connected=1][center]Placeholder"
+text = "[shake rate=20.0 level=2 connected=1][center]Una sombra en El Polo"
 
 [node name="boton_empezar" type="Button" parent="."]
 layout_mode = 1
@@ -41,9 +41,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -73.0
-offset_top = 61.0
+offset_top = 111.0
 offset_right = 73.0
-offset_bottom = 118.0
+offset_bottom = 168.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_lnv3o")

@@ -14367,6 +14367,11 @@ process_mode = 3
 [node name="PruebaDialogoUi" parent="CanvasLayer" groups=["dialogo"] instance=ExtResource("21_brg6g")]
 visible = false
 
+[node name="SFXAudioPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="area_entered" from="losetas/Loseta_Evento/Area2D" to="losetas/Loseta_Evento" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="losetas/Loseta_Evento2/Area2D" to="losetas/Loseta_Evento2" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="losetas/Loseta_Evento3/Area2D" to="losetas/Loseta_Evento3" method="_on_area_2d_area_entered"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bsgkpc1cmjmn4"
+path="res://.godot/imported/atmosphere horror 3.ogg-566fecb194c1a2b93cb3805483581e40.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/musica ambiente/atmosphere horror 3.ogg"
+dest_files=["res://.godot/imported/atmosphere horror 3.ogg-566fecb194c1a2b93cb3805483581e40.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

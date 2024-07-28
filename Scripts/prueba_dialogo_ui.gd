@@ -6,6 +6,11 @@ var texto : Array = []
 var linea_archivo = -1
 var terminado = true
 var texto_finalizado = false
+@onready var audio_stream_player = $AudioStreamPlayer
+@onready var audio_stream_player_2 = $AudioStreamPlayer2
+
+const TYPEWRITER = preload("res://Audio/efectos de sonido/typewriter.wav")
+const UNTITLED = preload("res://Audio/efectos de sonido/untitled.wav")
 
 func _ready():
 	#var file = FileAccess.open(mi_archivo, FileAccess.READ)
@@ -35,10 +40,14 @@ func escribir_texto():
 		var i = 0
 		while i < texto[linea_archivo].length() and not terminado:
 			rich_text_label.text += texto[linea_archivo][i]
+			audio_stream_player.stream = TYPEWRITER
+			audio_stream_player.play()
 			await get_tree().create_timer(0.1).timeout
 			i += 1
 
 func limpiar_texto():
+	audio_stream_player_2.stream = UNTITLED
+	audio_stream_player_2.play()
 	rich_text_label.text = ""
 	rich_text_label.bbcode_text = "[shake rate=15.0 level=2 connected=1]"
 

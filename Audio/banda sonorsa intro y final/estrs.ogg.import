@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bxf4krh2n5avp"
+path="res://.godot/imported/estrs.ogg-9c1440919c74a7d2a329712a0a6bc641.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/banda sonorsa intro y final/estrs.ogg"
+dest_files=["res://.godot/imported/estrs.ogg-9c1440919c74a7d2a329712a0a6bc641.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

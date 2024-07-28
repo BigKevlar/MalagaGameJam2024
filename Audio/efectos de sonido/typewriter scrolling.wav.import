@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://f8sw0ff0iwc4"
+path="res://.godot/imported/typewriter scrolling.wav-732cac543eec1b55f59424e0e81e93b0.sample"
+
+[deps]
+
+source_file="res://Audio/efectos de sonido/typewriter scrolling.wav"
+dest_files=["res://.godot/imported/typewriter scrolling.wav-732cac543eec1b55f59424e0e81e93b0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

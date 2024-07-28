@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://kw45dd6w26qw"
+path="res://.godot/imported/door1.wav-bacb9cd41c0b579fc0260c93b60dd693.sample"
+
+[deps]
+
+source_file="res://Audio/efectos de sonido/door1.wav"
+dest_files=["res://.godot/imported/door1.wav-bacb9cd41c0b579fc0260c93b60dd693.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cxg8jy4uix8v6"
+path="res://.godot/imported/AMBIENCE EXTREME TERROR.ogg-cde1c57062f317309c683ef7148f2baa.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/musica ambiente/AMBIENCE EXTREME TERROR.ogg"
+dest_files=["res://.godot/imported/AMBIENCE EXTREME TERROR.ogg-cde1c57062f317309c683ef7148f2baa.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

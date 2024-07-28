@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="malagajam18"
+config/name="una_sombra_en_el_polo"
+run/main_scene="res://Scenes/menu_principal.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 

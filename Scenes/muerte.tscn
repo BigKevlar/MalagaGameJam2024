@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://bitq2571liyrp"]
+[gd_scene load_steps=3 format=3 uid="uid://bitq2571liyrp"]
+
+[ext_resource type="Script" path="res://Scripts/muerte.gd" id="1_kveqd"]
+[ext_resource type="Texture2D" uid="uid://btxbo6h0yccpa" path="res://Textures/Dunkelrot_3081_Dark-Red_3081_02.11.31.000013---116700_OS.jpg" id="2_hagm5"]
 
 [node name="Muerte" type="Control"]
 layout_mode = 3
@@ -7,3 +10,49 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_kveqd")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_hagm5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -213.0
+offset_top = -69.0
+offset_right = 213.0
+offset_bottom = 69.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 35
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "Has muerto"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Volver a jugar"
+
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Salir del juego"
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Button2" to="." method="_on_button_2_pressed"]

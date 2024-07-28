@@ -69,7 +69,7 @@ func movimiento_ouijas():
 func _on_area_2d_red_area_entered(area):
 	if evento_index < eventos_array.size():
 		if eventos_array[evento_index] == 0:
-			print("has muerto")
+			get_tree().change_scene_to_file("res://Scenes/muerte.tscn")
 		
 		elif eventos_array[evento_index] == 1:
 			activar_losetas()
@@ -90,7 +90,7 @@ func _on_area_2d_red_area_entered(area):
 func _on_area_2d_blue_area_entered(area):
 	if evento_index < eventos_array.size():
 		if eventos_array[evento_index] == 1:
-			print("has muerto")
+			get_tree().change_scene_to_file("res://Scenes/muerte.tscn")
 		
 		elif eventos_array[evento_index] == 0:
 			activar_losetas()

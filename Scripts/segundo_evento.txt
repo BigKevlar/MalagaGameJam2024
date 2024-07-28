@@ -1,2 +1,9 @@
-hola, soy el segundo evento
-hasta pronto
+Presencia: ¿En qué podemos ayudarte?
+Luz: Quiero salir de aquí
+Presencia: Lo siento. No entendemos tu pregunta.
+Luz: ¿Cómo puedo salir de este edificio infernal?
+Presencia: No entendemos eso de "infernal". Este es nuestro hogar.
+Luz: ¿Hay algún modo de continuar hasta la salida?
+Presencia: Claro. Siempre hay una salida. Acaba con las pruebas y conseguirás tu objetivo.
+Luz: Esa no puede ser la solución. Dame otra.
+Presencia: Lo siento no encuentro ninguna otra debida a tus propias circunstancias. Siempre puedes mirar a tu alrededor, quizas las cortinas te gusten...

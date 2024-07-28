@@ -1,0 +1,7 @@
+Presencia: ¿En qué podemos ayudarte de nuevo?
+Luz: Ya sabes lo que quiero. Dime como salir de aquí.
+Presencia: Lo siento. No entendemos tu pregunta. 
+Luz: ¿Dónde debería dirigirme para salir de este edificio?
+Presencia: Tienes dos opciones donde quizá puedas encontrar una respuesta, pero no disponemos de datos suficientes.
+Luz: ¿A qué dos opciones te refieres?
+Presencia: Claro. Tienes razón, disculpa por la confusión. Un poco más adelante tienes una opción que puede resultar letal, destino oscuro que puede atraparte para siempre. Pregunta si no a los extintores.

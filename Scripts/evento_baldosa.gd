@@ -1,7 +1,7 @@
 extends Sprite2D
 
 @onready var evento_iniciado : bool = false
-@onready var texto_primer_evento : String = "res://Scripts/primer_evento.txt"
+@onready var texto_primer_evento : String = "res://Scripts/cuarto_evento.txt"
 @onready var protagonista = get_tree().get_first_node_in_group("protagonista")
 @onready var cuadro_dialogo = get_tree().get_first_node_in_group("dialogo")
 @onready var event_manager = get_tree().get_first_node_in_group("event_manager")

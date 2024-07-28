@@ -1,2 +1,8 @@
-bienvenido al evento 3
-sayonara, baby
+Luz: ¿Tu otra vez?
+Presencia: Esa actitud no te llevará a ninguna parte.
+Luz: Necesito salir de aquí. Odio este lugar.
+Presencia: Podrías pasar la eternidad con nosotros en este lugar. Seguro que te gustaría.
+Luz: Tengo amigos, familias, mascotas... me esperan en casa...
+Presencia: ¿Y piensas que todo eso debería preocuparnos? Lo siento, pero no.
+Luz: Vale, me rindo... ¿Qué debería hacer ahora?
+Presencia: Por donde entraste no puedes salir, y en esta planta ya no obtendrás ayuda. Tal vez deberías usar las escaleras.

@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2hdn2fced6t2"]
+[gd_scene load_steps=4 format=3 uid="uid://cik1tqljh75yn"]
 
 [ext_resource type="Script" path="res://Scripts/cinematica_inicial.gd" id="1_arjay"]
 [ext_resource type="PackedScene" uid="uid://dvpe5rqdpg3si" path="res://Scenes/prueba_dialogo_ui.tscn" id="2_53wb7"]
-[ext_resource type="Texture2D" uid="uid://8phg5cmekgdp" path="res://Textures/Imágenes Polo Digital/img002.jpg" id="2_upop4"]
+[ext_resource type="Texture2D" uid="uid://tr3ijnnvfjp" path="res://Textures/Imágenes Polo Digital/img002.jpg" id="2_upop4"]
 
 [node name="CinematicaInicial" type="Node2D"]
 script = ExtResource("1_arjay")

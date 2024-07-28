@@ -1,3 +1,10 @@
-hola, soy el primer evento
-esta es la segunda linea del evento
-hasta luego
+Presencia: ¿En qué puedo ayudarte?
+Luz: No sé que hago aquí… ¿puedes ayudarme?
+Presencia: ¿Piensas que vamos a ayudarte? Nos gusta tu optimismo… resulta enternecedor.
+Luz: ¿Me ayudáis entonces o no?
+Presencia: Mejor te dejamos elegir...
+Presencia: Tienes dos objetivos: uno a la derecha de tu camino y otro a la izquierda.
+Luz: ¿Y si me equivoco?
+Presencia: Todo acaba... o todo sigue, quizas...  las consecuencias dependen de tu elección. Sólo te adelanto que las camas de 42 son muy acogedoras...
+Luz: ¿Que quieres decir con eso?
+Presencia: Continua ascendiendo en tu objetivo o morir aquí y formar parte de nosotros. Decide.

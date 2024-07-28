@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dwttjqngadynn" path="res://Textures/puertas-ventanas.png" id="15_6bnkr"]
 [ext_resource type="Texture2D" uid="uid://cgdf4oyaafry0" path="res://Textures/ouija-removebg-preview.png" id="15_c30rv"]
 [ext_resource type="PackedScene" uid="uid://b28p1wvjm8dp7" path="res://Scenes/protagonista.tscn" id="16_687sj"]
-[ext_resource type="Script" path="res://Scripts/evento_baldosa.gd" id="17_3foo8"]
+[ext_resource type="Script" path="res://Scripts/evento_baldosa1.gd" id="17_3foo8"]
 [ext_resource type="Script" path="res://Scripts/evento_baldosa2.gd" id="18_n65a5"]
 [ext_resource type="Script" path="res://Scripts/evento_baldosa3.gd" id="19_cwkry"]
 [ext_resource type="PackedScene" uid="uid://dv4b1b5nnjdle" path="res://Scenes/event_manager.tscn" id="20_jv6vt"]

@@ -12,9 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://dnq342kl3aju4" path="res://Textures/sillas.png" id="9_mk136"]
 [ext_resource type="Texture2D" uid="uid://cpixaj48ufowa" path="res://Textures/señal.png" id="10_m35sw"]
 [ext_resource type="Texture2D" uid="uid://cgdf4oyaafry0" path="res://Textures/ouija-removebg-preview.png" id="11_h54jk"]
-[ext_resource type="Script" path="res://Scripts/evento_baldosa.gd" id="12_ari3e"]
-[ext_resource type="Script" path="res://Scripts/evento_baldosa2.gd" id="13_i67is"]
-[ext_resource type="Script" path="res://Scripts/evento_baldosa3.gd" id="14_p3yhy"]
+[ext_resource type="Script" path="res://Scripts/evento_baldosa4.gd" id="12_5glct"]
+[ext_resource type="Script" path="res://Scripts/evento_baldosa5.gd" id="13_tph1k"]
+[ext_resource type="Script" path="res://Scripts/evento_baldosa6.gd" id="14_xu5pt"]
 [ext_resource type="Texture2D" uid="uid://husxupa6dtin" path="res://OUIJA.png" id="16_1eysq"]
 [ext_resource type="PackedScene" uid="uid://dv4b1b5nnjdle" path="res://Scenes/event_manager.tscn" id="16_pli60"]
 [ext_resource type="Script" path="res://Scripts/GameManager2.gd" id="17_thmqa"]
@@ -8287,7 +8287,7 @@ position = Vector2(400, 464)
 position = Vector2(-152, 88)
 scale = Vector2(0.086778, 0.086778)
 texture = ExtResource("11_h54jk")
-script = ExtResource("12_ari3e")
+script = ExtResource("12_5glct")
 
 [node name="Area2D" type="Area2D" parent="losetas/Loseta_Evento"]
 collision_layer = 2
@@ -8300,7 +8300,7 @@ shape = SubResource("RectangleShape2D_lqnbl")
 position = Vector2(253.695, 37.6945)
 scale = Vector2(0.0867781, 0.0867781)
 texture = ExtResource("11_h54jk")
-script = ExtResource("13_i67is")
+script = ExtResource("13_tph1k")
 
 [node name="Area2D" type="Area2D" parent="losetas/Loseta_Evento2"]
 collision_layer = 2
@@ -8313,7 +8313,7 @@ shape = SubResource("RectangleShape2D_lqnbl")
 position = Vector2(280.847, -295.153)
 scale = Vector2(0.0993889, 0.0993889)
 texture = ExtResource("11_h54jk")
-script = ExtResource("14_p3yhy")
+script = ExtResource("14_xu5pt")
 
 [node name="Area2D" type="Area2D" parent="losetas/Loseta_Evento3"]
 collision_layer = 2

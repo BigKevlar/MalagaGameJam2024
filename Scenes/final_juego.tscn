@@ -1,12 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://ds57b4bhfijy3"]
+[gd_scene load_steps=4 format=3 uid="uid://ds57b4bhfijy3"]
 
 [ext_resource type="Script" path="res://Scripts/final_juego.gd" id="1_bpoyv"]
 [ext_resource type="PackedScene" uid="uid://dvpe5rqdpg3si" path="res://Scenes/prueba_dialogo_ui.tscn" id="2_1ue83"]
+[ext_resource type="Texture2D" uid="uid://byw4lym7w8stj" path="res://Textures/Imágenes Polo Digital/img001.jpg" id="2_cjrnt"]
 
 [node name="FinalJuego" type="Node2D"]
 script = ExtResource("1_bpoyv")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_cjrnt")
+expand_mode = 1
 
 [node name="PruebaDialogoUi" parent="CanvasLayer" groups=["dialogo"] instance=ExtResource("2_1ue83")]
 process_mode = 3
